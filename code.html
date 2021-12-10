@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Life</title>
+
+</head>
+
+<body>
+<div>
+<p1>
+-This page is used to present to you an example code I have created during this semester. This code is a FizzBuzz, which is often times used during interview processes for jobs/internships in the programming field. 
+<br>
+-The FizzBuzz program is to output numbers from 1 to 100. If the number is divisible by 3, replace it with “Fizz”. If it is divisible by 5, replace it with “Buzz”. If it is divisible by 3 and 5 replace it with “FizzBuzz”.
+</p1>
+<br>
+<p2>
+- Here is a link back to the main page. <a href="https://gjdb33.github.io/final_project/">Index</a>
+</p2>
+<br>
+<p4 style="color:blue">
+from math import pi
+
+def get_radius_from_user():
+    while True:
+        try:
+            radius = float(input("What is the radius? "))
+            if radius < 0:
+                print("The radius must be 0 or greater.")
+                continue
+            break
+        except Exception as e:
+            print(e)
+        
+    return radius
+
+def get_height_from_user():
+    while True:
+        try:
+            height = float(input("What is the height? "))
+            if height < 0:
+                print("The height must be 0 or greater.")
+                continue
+            break
+        except Exception as e:
+            print(e)
+            
+    return height
+
+def get_positive_value_from_user(prompt):
+    while True:
+        try:
+            value = float(input(prompt))
+            if value < 0:
+                print("The value entered must be 0 or greater.")
+                continue
+            break
+        except Exception as e:
+            print(e)
+        
+    return value   
+    
+
+def calculate_circular_cone_volume(radius, height):
+    volume = pi * radius**2 * height / 3
+    return volume
+
+def generate_report(radius, height, volume):
+    print("A right circular cone of radius =", radius, "and height =", height, "has a volume of", volume)
+    restart = input("Would you like to restart this program? ")
+    if restart == "yes" or restart == "y" or restart == "Yes" or restart == "Y":
+       get_radius_from_user()
+       get_height_from_user()
+       get_positive_value_from_user(prompt)
+       calculate_cylinder_volume(radius, height)     
+       generate_report(radius, height, volume)     
+ 
+    if restart == "n" or restart == "no" or restart == "N" or restart == "No":
+        print ("Goodbye.")
+        exit()
+
+    else:
+        print("Please type y/n")
+def main():
+    #radius = get_radius_from_user()
+    radius = get_positive_value_from_user("What is the radius?")
+    #height = get_height_from_user()
+    height = get_positive_value_from_user("What is the height?")
+    volume = calculate_circular_cone_volume(radius, height)
+    generate_report(radius, height, volume)
+
+
+main()
+</p4>
+<div>
+
+</div>
+</body>
+
+</html>
