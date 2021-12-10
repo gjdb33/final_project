@@ -22,75 +22,131 @@
 from math import pi
 
 def get_radius_from_user():
-    while True:
-        try:
-            radius = float(input("What is the radius? "))
-            if radius < 0:
-                print("The radius must be 0 or greater.")
-                continue
-            break
-        except Exception as e:
-            print(e)
+    <br>
+while True:
+    <br>
+try:
+    <br>
+radius = float(input("What is the radius? "))
+    <br>
+if radius < 0:
+              <br>
+print("The radius must be 0 or greater.")
+    <br>
+continue
+    <br>
+break
+    <br>
+except Exception as e:
+    <br>
+print(e)
+    <br>
         
-    return radius
+return radius
+   <br>
 
 def get_height_from_user():
-    while True:
-        try:
-            height = float(input("What is the height? "))
-            if height < 0:
-                print("The height must be 0 or greater.")
-                continue
-            break
-        except Exception as e:
-            print(e)
+     <br>
+while True:
+     <br>
+try:
+     <br>
+height = float(input("What is the height? "))
+     <br>
+if height < 0:
+               <br>
+print("The height must be 0 or greater.")
+     <br>
+continue
+     <br>
+break
+     <br>
+except Exception as e:
+     <br>
+print(e)
+     <br>
             
-    return height
+return height
+     <br>
 
 def get_positive_value_from_user(prompt):
-    while True:
-        try:
-            value = float(input(prompt))
-            if value < 0:
-                print("The value entered must be 0 or greater.")
-                continue
-            break
-        except Exception as e:
-            print(e)
+     <br>
+while True:
+     <br>
+try:
+     <br>
+value = float(input(prompt))
+     <br>
+if value < 0:
+              <br>
+print("The value entered must be 0 or greater.")
+     <br>
+continue
+     <br>
+break
+     <br>
+except Exception as e:
+     <br>
+print(e)
+     <br>
         
-    return value   
+return value   
+     <br>
     
 
 def calculate_circular_cone_volume(radius, height):
-    volume = pi * radius**2 * height / 3
-    return volume
+     <br>
+volume = pi * radius**2 * height / 3
+     <br>
+return volume
+     <br>
 
 def generate_report(radius, height, volume):
-    print("A right circular cone of radius =", radius, "and height =", height, "has a volume of", volume)
-    restart = input("Would you like to restart this program? ")
-    if restart == "yes" or restart == "y" or restart == "Yes" or restart == "Y":
-       get_radius_from_user()
-       get_height_from_user()
-       get_positive_value_from_user(prompt)
-       calculate_cylinder_volume(radius, height)     
-       generate_report(radius, height, volume)     
+     <br>
+print("A right circular cone of radius =", radius, "and height =", height, "has a volume of", volume)
+     <br>
+restart = input("Would you like to restart this program? ")
+     <br>
+if restart == "yes" or restart == "y" or restart == "Yes" or restart == "Y":
+     <br>
+get_radius_from_user()
+     <br>
+get_height_from_user()
+     <br>
+get_positive_value_from_user(prompt)
+     <br>
+calculate_cylinder_volume(radius, height)   
+     <br>
+generate_report(radius, height, volume)   
+     <br>
  
-    if restart == "n" or restart == "no" or restart == "N" or restart == "No":
-        print ("Goodbye.")
-        exit()
+if restart == "n" or restart == "no" or restart == "N" or restart == "No":
+     <br>
+print ("Goodbye.")
+     <br>
+exit()
+     <br>
 
-    else:
-        print("Please type y/n")
+else:
+     <br>
+print("Please type y/n")
+     <br>
 def main():
-    #radius = get_radius_from_user()
-    radius = get_positive_value_from_user("What is the radius?")
-    #height = get_height_from_user()
-    height = get_positive_value_from_user("What is the height?")
-    volume = calculate_circular_cone_volume(radius, height)
-    generate_report(radius, height, volume)
+     <br>
+#radius = get_radius_from_user()
+     <br>
+radius = get_positive_value_from_user("What is the radius?") 
+     <br>
+height = get_positive_value_from_user("What is the height?")
+     <br>
+volume = calculate_circular_cone_volume(radius, height)
+     <br>
+generate_report(radius, height, volume)
+     <br>
 
 
 main()
+     <br>
 </p4>
 <div>
 
